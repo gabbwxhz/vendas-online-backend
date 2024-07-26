@@ -9,9 +9,17 @@ export class UserService {
   private users: User[] = [];
 
   async createUser(createUserDto: CreateUserDto): Promise<User> {
-    return {
+    const user: User = {
       ...createUserDto,
-      id: 1,
+      id: this.users.length + 1,
     };
+
+    this.users.push(user);
+
+    return user;
+  }
+
+  async getAllUser(): Promise<User[]> {
+    return this.users;
   }
 }
