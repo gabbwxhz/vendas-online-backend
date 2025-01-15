@@ -16,6 +16,7 @@ export class UserService {
   async createUser(createUserDto: CreateUserDto): Promise<UserEntity> {
     return this.userRepository.save({
       ...createUserDto,
+      typeUser: 1,
     });
   }
 
