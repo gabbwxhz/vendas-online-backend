@@ -28,6 +28,7 @@ import { AddressModule } from './address/address.module';
       entities: [`${__dirname}/**/*.entity{.js,.ts}`],
       migrations: [`${__dirname}/migration/{.ts,*.js}`],
       migrationsRun: true,
+      logging: true,
     }),
     UserModule,
     StateModule,
