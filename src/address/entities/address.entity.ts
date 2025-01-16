@@ -18,16 +18,13 @@ export class AddressEntity {
   complement: string;
 
   @Column({ name: 'number', nullable: false })
-  numbeAddress: number;
+  numberAddress: number;
 
   @Column({ name: 'cep', nullable: false })
   cep: string;
 
   @Column({ name: 'city_id', nullable: false })
   cityId: number;
-
-  @Column({ name: 'type_user', nullable: false })
-  typeUser: number;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
